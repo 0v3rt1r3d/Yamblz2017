@@ -43,6 +43,7 @@ public class WeatherPresenterImpl implements WeatherPresenter {
 
     @Override
     public void onWeatherLoaded() {
+
         view.setWeather(model.getLastWeather());
         view.hideProgress();
     }

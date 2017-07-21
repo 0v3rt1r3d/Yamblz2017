@@ -12,6 +12,7 @@ public class Weather {
     public static final String DATE_FORMAT = "EEE, d MMM yyyy hh:mm:ss Z";
 
     public String city;
+    public String lang;
     public Date date;
 
     @SerializedName("weather")

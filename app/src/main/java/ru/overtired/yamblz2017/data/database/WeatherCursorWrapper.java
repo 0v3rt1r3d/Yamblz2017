@@ -40,6 +40,8 @@ public class WeatherCursorWrapper extends CursorWrapper {
 
         weather.date = new Date(getLong(getColumnIndex(DatabaseScheme.WeatherTable.Cols.DATE)));
 
+        weather.lang = getString(getColumnIndex(DatabaseScheme.WeatherTable.Cols.LANG));
+
         return weather;
     }
 }

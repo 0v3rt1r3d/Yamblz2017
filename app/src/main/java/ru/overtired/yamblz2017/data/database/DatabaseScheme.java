@@ -12,6 +12,7 @@ public class DatabaseScheme {
 
         public static final class Cols{
             public static final String CITY = "city";
+            public static final String LANG = "lang";
             public static final String WEATHER = "weather";
             public static final String TEMP_C = "temp_c";
             public static final String TEMP_F = "temp_f";

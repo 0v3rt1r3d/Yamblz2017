@@ -44,13 +44,13 @@ public class Dao {
     }
 
     @Nullable
-    public synchronized Weather getLastWeather() {
+    public synchronized Weather getLastWeather(String lang) {
         SQLiteDatabase database = new DatabaseHelper(context).getReadableDatabase();
 
         Cursor cursor = database.query(DatabaseScheme.WeatherTable.NAME,
                 null,
-                null,
-                null,
+                DatabaseScheme.WeatherTable.Cols.LANG+"=?",
+                new String[]{lang},
                 null,
                 null,
                 DatabaseScheme.WeatherTable.Cols.DATE
@@ -86,6 +86,7 @@ public class Dao {
         contentValues.put(DatabaseScheme.WeatherTable.Cols.WEATHER, weather.weather);
 
         contentValues.put(DatabaseScheme.WeatherTable.Cols.DATE, weather.date.getTime());
+        contentValues.put(DatabaseScheme.WeatherTable.Cols.LANG,weather.lang);
 
         return contentValues;
     }

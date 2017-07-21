@@ -55,6 +55,8 @@ public class ResponseProcesser {
                 .get("city")
                 .getAsString();
 
+        weather.lang = lang;
+
         String dateText = mainPart.getAsJsonObject()
                 .get("local_time_rfc822")
                 .getAsString();

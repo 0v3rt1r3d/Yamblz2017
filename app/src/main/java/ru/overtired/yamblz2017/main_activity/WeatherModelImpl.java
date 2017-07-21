@@ -40,7 +40,8 @@ public class WeatherModelImpl implements WeatherModel {
 
     @Override
     public Weather getLastWeather() {
-        return Dao.get(context).getLastWeather();
+        String lang = ((App)context.getApplicationContext()).getLanguage();
+        return Dao.get(context).getLastWeather(lang);
     }
 
     @Override

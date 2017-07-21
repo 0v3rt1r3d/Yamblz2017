@@ -18,6 +18,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("create table " + DatabaseScheme.WeatherTable.NAME + "(" +
                 "_id integer primary key autoincrement, " +
                 DatabaseScheme.WeatherTable.Cols.CITY + "," +
+                DatabaseScheme.WeatherTable.Cols.LANG + ","+
                 DatabaseScheme.WeatherTable.Cols.WEATHER + "," +
                 DatabaseScheme.WeatherTable.Cols.TEMP_C + "," +
                 DatabaseScheme.WeatherTable.Cols.TEMP_F + "," +
