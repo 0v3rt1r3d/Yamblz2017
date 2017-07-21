@@ -4,7 +4,7 @@
         <item
             android:id="@+id/main_activity_nav_content"
             android:icon="@drawable/ic_content"
-            android:title="@string/action_content" />
+            android:title="@string/action_weather" />
         <item
             android:id="@+id/main_activity_nav_settings"
             android:icon="@drawable/ic_settings"
@@ -14,4 +14,5 @@
         android:id="@+id/main_activity_nav_about"
         android:icon="@drawable/ic_about"
         android:title="@string/action_about" />
+
 </menu>

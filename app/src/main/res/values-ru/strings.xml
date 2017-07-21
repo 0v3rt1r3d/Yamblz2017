@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Yamblz2017</string>
-    <string name="action_about">О программе</string>
-    <string name="action_content">Содержимое</string>
+    <string name="app_name">Погода</string>
+    <string name="action_about">О приложении</string>
+    <string name="action_weather">Погода</string>
     <string name="action_settings">Настройки</string>
     <string name="app_about">Приложение, содержащее домашние задания проекта Яндекс.Мобилизация 2017</string>
     <string name="app_about_title">О приложении</string>
     <string name="test_the_content">Содержимое</string>
     <string name="toggle_close_drawer">Открыть шторку</string>
     <string name="toggle_open_drawer">Закрыть шторку</string>
+    <string name="moscow">Москва</string>
+    <string name="feelslike">"Ощущается "</string>
+    <string name="pref_title_autoupdate">Автоматическое обновление</string>
+    <string name="pref_title_autoupdate_interval">Интервал обновления</string>
+    <string name="interval_entry_12_hours">12 часов</string>
+    <string name="interval_entry_15_min">15 минут</string>
+    <string name="interval_entry_1_hour">1 час</string>
+    <string name="interval_entry_24_hours">24 часа</string>
+    <string name="interval_entry_2_hours">2 часа</string>
+    <string name="interval_entry_30_min">30 минут</string>
+    <string name="interval_entry_3_hours">3 часа</string>
+    <string name="interval_entry_6_hours">6 часов</string>
+    <string name="humidity">"Влажность "</string>
+    <string name="windspeed">"Скорость ветра "</string>
+    <string name="kph">км/ч</string>
+    <string name="no_internet_error">Нет соединения с сервером</string>
 </resources>
