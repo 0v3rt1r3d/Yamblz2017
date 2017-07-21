@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <CheckBoxPreference
-        android:defaultValue="true"
-        android:key="pref"
-        android:title="Enable other settings" />
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <SwitchPreference
-        android:dependency="pref"
         android:defaultValue="true"
-        android:key="pref2"
-        android:title="Setting"
-        android:summary="Setting description"/>
+        android:key="@string/pref_key_autoupdate"
+        android:title="@string/pref_title_autoupdate" />
+    <ListPreference
+        android:dependency="autoupdate"
+        android:defaultValue="true"
+        android:key="@string/pref_key_autoupdate_interval"
+        android:title="@string/pref_title_autoupdate_interval"
+        android:entries="@array/interval_entries"
+        android:entryValues="@array/interval_values"
+        app:defaultValue="@string/interval_default"
+        />
 
 </PreferenceScreen>

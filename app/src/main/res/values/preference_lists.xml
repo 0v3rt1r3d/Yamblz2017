@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="interval_entries">
+        <item>@string/interval_entry_15_min</item>
+        <item>@string/interval_entry_30_min</item>
+        <item>@string/interval_entry_1_hour</item>
+        <item>@string/interval_entry_2_hours</item>
+        <item>@string/interval_entry_3_hours</item>
+        <item>@string/interval_entry_6_hours</item>
+        <item>@string/interval_entry_12_hours</item>
+        <item>@string/interval_entry_24_hours</item>
+    </string-array>
+
+    <string name="interval_default" translatable="false">900000</string>
+    <string-array name="interval_values" translatable="false">
+        <item>900000</item>
+        <item>1800000</item>
+        <item>3600000</item>
+        <item>7200000</item>
+        <item>10800000</item>
+        <item>21600000</item>
+        <item>43200000</item>
+        <item>86400000</item>
+    </string-array>
+    
+</resources>
