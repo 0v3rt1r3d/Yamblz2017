@@ -14,5 +14,9 @@
         android:entryValues="@array/interval_values"
         app:defaultValue="@string/interval_default"
         />
+    <Preference
+        android:key="@string/pref_key_select_city"
+        android:title="Выбор города"
+        android:defaultValue="@string/moscow" />
 
 </PreferenceScreen>

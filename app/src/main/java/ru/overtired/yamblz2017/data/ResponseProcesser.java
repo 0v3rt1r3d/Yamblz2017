@@ -2,18 +2,18 @@ package ru.overtired.yamblz2017.data;
 
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.util.Log;
+
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
 
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonParser;
-
 import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 /**
@@ -69,5 +69,15 @@ public class ResponseProcesser {
         }
 
         return weather;
+    }
+
+    @Nullable
+    public static AutoCompleteFetcher requestAutoComplete() {
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://autocomplete.wunderground.com")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        return retrofit.create(AutoCompleteFetcher.class);
     }
 }

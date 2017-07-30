@@ -4,7 +4,9 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -38,6 +40,8 @@ public class WeatherFragment extends Fragment implements  WeatherView{
 
     private Unbinder unbinder;
 
+    private SharedPreferences sharedPreferences;
+
     @BindView(R.id.card_time)
     TextView cardTime;
     @BindView(R.id.card_image)
@@ -52,6 +56,8 @@ public class WeatherFragment extends Fragment implements  WeatherView{
     TextView cardWindSpeed;
     @BindView(R.id.card_weather)
     TextView cardWeather;
+    @BindView(R.id.card_city)
+    TextView cardCity;
 
     @BindView(R.id.refresh_layout)
     SwipeRefreshLayout refreshLayout;
@@ -89,6 +95,12 @@ public class WeatherFragment extends Fragment implements  WeatherView{
         }else{
             presenter.setView(this);
         }
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
     }
 
     @Override
@@ -139,6 +151,9 @@ public class WeatherFragment extends Fragment implements  WeatherView{
         cardHumidity.setText(weather.humidity);
         cardWindSpeed.setText(weather.windSpeedKph+" "+getString(R.string.kph));
         cardWeather.setText(weather.weather);
+        cardCity.setText(
+                sharedPreferences.getString(getString(R.string.pref_key_select_city),
+                getString(R.string.moscow)));
     }
 
     @Override
